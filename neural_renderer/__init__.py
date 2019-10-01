@@ -3,6 +3,7 @@ from .lighting import lighting
 from .load_obj import load_obj
 from .look import look
 from .look_at import look_at
+from .canonical import canonical
 from .mesh import Mesh
 from .perspective import perspective
 from .projection import projection
@@ -12,4 +13,4 @@ from .save_obj import save_obj
 from .vertices_to_faces import vertices_to_faces
 
 __version__ = '1.1.3'
-name = 'neural_renderer_pytorch'
+name = 'my_neural_renderer_pytorch'
