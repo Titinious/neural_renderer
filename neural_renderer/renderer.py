@@ -108,6 +108,11 @@ class Renderer(nn.Module):
             # perspective transformation
             if self.perspective:
                 vertices = nr.perspective(vertices, angle=self.viewing_angle)
+        elif self.camera_mode == 'canonical':
+            vertices = nr.canonical(vertices, self.eye)
+            # perspective transformation
+            if self.perspective:
+                vertices = nr.perspective(vertices, angle=self.viewing_angle)
         elif self.camera_mode == 'projection':
             if K is None:
                 K = self.K
@@ -140,6 +145,11 @@ class Renderer(nn.Module):
                 vertices = nr.perspective(vertices, angle=self.viewing_angle)
         elif self.camera_mode == 'look':
             vertices = nr.look(vertices, self.eye, self.camera_direction)
+            # perspective transformation
+            if self.perspective:
+                vertices = nr.perspective(vertices, angle=self.viewing_angle)
+        elif self.camera_mode == 'canonical':
+            vertices = nr.canonical(vertices, self.eye)
             # perspective transformation
             if self.perspective:
                 vertices = nr.perspective(vertices, angle=self.viewing_angle)
@@ -186,6 +196,11 @@ class Renderer(nn.Module):
                 vertices = nr.perspective(vertices, angle=self.viewing_angle)
         elif self.camera_mode == 'look':
             vertices = nr.look(vertices, self.eye, self.camera_direction)
+            # perspective transformation
+            if self.perspective:
+                vertices = nr.perspective(vertices, angle=self.viewing_angle)
+        elif self.camera_mode == 'canonical':
+            vertices = nr.canonical(vertices, self.eye)
             # perspective transformation
             if self.perspective:
                 vertices = nr.perspective(vertices, angle=self.viewing_angle)
