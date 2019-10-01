@@ -2,15 +2,16 @@
 
 This repo contains a PyTorch implementation of the paper [Neural 3D Mesh Renderer](http://hiroharu-kato.com/projects_en/neural_renderer.html) by Hiroharu Kato, Yoshitaka Ushiku, and Tatsuya Harada.
 It is a port of the [original Chainer implementation](https://github.com/hiroharu-kato/neural_renderer) released by the authors.
-Currently the API is the same as in the original implementation with some smalls additions (e.g. render using a general 3x4 camera matrix, lens distortion coefficients etc.). However it is possible that it will change in the future.
+Currently the API is the same as in the original implementation with some smalls additions (e.g. render using a general 3x4 camera matrix, lens distortion coefficients etc.). However it is possible that it will change in the future. 
+
+This specific fork aims to make it work better specifically on Windows.
 
 The library is fully functional and it passes all the test cases supplied by the authors of the original library.
 Detailed documentation will be added in the near future.
 ## Requirements
 Python 2.7+ and PyTorch 0.4.0.
 
-The code has been tested only with PyTorch 0.4.0, there are no guarantees that it is compatible with older versions.
-Currently the library has both Python 3 and Python 2 support.
+The code has been tested only with PyTorch 1.2.0 with python 3.6, there are no guarantees that it is compatible with other versions.
 
 **Note**: In some newer PyTorch versions you might see some compilation errors involving AT_ASSERT. In these cases you can use the version of the code that is in the branch *at_assert_fix*. These changes will be merged into master in the near future.
 ## Installation
